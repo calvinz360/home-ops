@@ -10,7 +10,6 @@ TALOSCONFIG = "{{config_root}}/talos/clusterconfig/talosconfig"
 "aqua:budimanjojo/talhelper" = "3.0.39"
 "aqua:cilium/cilium-cli" = "0.18.8"
 "aqua:cli/cli" = "2.83.0"
-"aqua:cloudflare/cloudflared" = "2025.11.1"
 "aqua:cue-lang/cue" = "0.15.0"
 "aqua:FiloSottile/age" = "1.2.1"
 "aqua:fluxcd/flux2" = "2.7.3"
@@ -24,3 +23,9 @@ TALOSCONFIG = "{{config_root}}/talos/clusterconfig/talosconfig"
 "aqua:mikefarah/yq" = "4.48.1"
 "aqua:siderolabs/talos" = "1.11.5"
 "aqua:yannh/kubeconform" = "0.7.0"
+
+[tools."github:cloudflare/cloudflared"]
+version = "2025.11.1"
+
+[tools."github:cloudflare/cloudflared".platforms]
+macos-arm64 = { asset_pattern = "cloudflared-darwin-arm64.tgz" }
