@@ -14,6 +14,6 @@ spec:
     serviceMonitor:
       enabled: true
     grafanaDashboard:
-      enabled: true
+      enabled: false
     webhook:
       replicaCount: 2
