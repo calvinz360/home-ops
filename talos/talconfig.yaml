@@ -84,7 +84,6 @@ patches:
   - "@./patches/global/machine-sysctls.yaml"
   - "@./patches/global/machine-time.yaml"
   - "@./patches/global/machine-disks.yaml"
-  - "@./patches/global/customization-extensions.yaml"
 
 # Controller patches
 controlPlane:
