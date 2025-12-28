@@ -25,7 +25,7 @@ spec:
     persistence:
       defaultDataLocality: best-effort
     defaultSettings:
-      defaultDataPath: "/var/mnt/longhorn"
+      defaultDataPath: "/var/lib/longhorn"
       replicaDiskSoftAntiAffinity: false
       createDefaultDiskLabeledNodes: true
       defaultDataLocality: best-effort
