@@ -3,4 +3,4 @@ kind: Secret
 metadata:
   name: cert-manager-secret
 stringData:
-  api-token: m_l-t25VAf9Vvq7yDgf4HZovgb0DhtkBAM24iR3j
+  api-token: zrgkR9-_5a_Mn5HUluk8oCmxOhC9Frjn1Xu-cl2c
