@@ -7,4 +7,3 @@ resources:
 - ./helmrepository.yaml
 - ./httproute.yaml
 # - ./prometheusrule.yaml
-- ./uservolumeconfig.yaml
