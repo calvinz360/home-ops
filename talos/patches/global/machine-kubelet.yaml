@@ -17,8 +17,7 @@ machine:
 ---
 apiVersion: v1alpha1
 kind: UserVolumeConfig
-metadata:
-  name: longhorn
+name: longhorn
 provisioning:
   diskSelector:
     match: disk.dev_path == '/dev/sdb'
