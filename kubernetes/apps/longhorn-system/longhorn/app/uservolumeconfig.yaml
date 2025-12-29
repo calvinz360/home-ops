@@ -4,5 +4,5 @@ kind: UserVolumeConfig
 name: longhorn
 provisioning:
   diskSelector:
-    match: disk.dev_path == /dev/sdb
+    match: disk.dev_path == '/dev/sdb'
   minSize: 50GB
