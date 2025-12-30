@@ -38,6 +38,9 @@ spec:
       replicaAutoBalance: best-effort
       storageMinimalAvailablePercentage: "1"
       storageReservedPercentageForDefaultDisk: "10"
+    defaultBackupStore:
+      backupTarget: s3://kichi@auto/
+      backupTargetCredentialSecret: longhorn-s3-secret
     ingress:
       enabled: false
     metrics:
