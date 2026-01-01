@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Secret
-metadata:
-  name: cert-manager-secret
-stringData:
-  api-token: zrgkR9-_5a_Mn5HUluk8oCmxOhC9Frjn1Xu-cl2c
