@@ -8,6 +8,7 @@
 /github-deploy.key
 /github-deploy.key.pub
 /github-push-token.txt
+/bgp.conf
 # Template config files
 /cluster.yaml
 /nodes.yaml
