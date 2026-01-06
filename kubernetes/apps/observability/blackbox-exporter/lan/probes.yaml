@@ -11,21 +11,8 @@ spec:
   targets:
     staticConfig:
       static:
-        - expanse.internal
-        - garage-door.internal
-        - hdhomerun.internal
-        - idrac.internal
-        - jetkvm-0.internal
-        - jetkvm-1.internal
-        - jetkvm-2.internal
-        - k8s-0.internal
-        - k8s-1.internal
-        - k8s-2.internal
-        - kiosk.internal
-        - receiver.internal
-        - ups.internal
-        - zigbee-controller.internal
-        - zwave-controller.internal
+        - kl-san-1.localdomain
+
   metricRelabelings:
     - targetLabel: service
       replacement: blackbox-exporter-lan
@@ -43,7 +30,7 @@ spec:
   targets:
     staticConfig:
       static:
-        - expanse.internal:2049
+        - kl-san-1.localdomain:2049
   metricRelabelings:
     - targetLabel: service
       replacement: blackbox-exporter-lan
