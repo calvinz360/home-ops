@@ -9,7 +9,7 @@ spec:
     # renovate: datasource=docker depName=ghcr.io/siderolabs/installer
     version: v1.12.1
   policy:
-    rebootMode: powercycle
+    rebootMode: default
   # healthChecks:
   #   - apiVersion: v1
   #     kind: Node

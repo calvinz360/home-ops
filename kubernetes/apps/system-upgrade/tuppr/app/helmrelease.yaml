@@ -8,9 +8,9 @@ spec:
   chartRef:
     kind: OCIRepository
     name: tuppr
-  interval: 1h
+  interval: 30m
   values:
     replicaCount: 2
-    monitoring:
-      serviceMonitor:
-        enabled: true
+    # monitoring:
+    #   serviceMonitor:
+    #     enabled: true
