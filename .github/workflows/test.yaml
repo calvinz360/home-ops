@@ -1,0 +1,9 @@
+name: Actions Runner Demo
+on:
+  workflow_dispatch:
+
+jobs:
+  Test-Actions:
+    runs-on: arc-calvinz360-home-ops
+    steps:
+    - run: echo "This is running successfully !"
