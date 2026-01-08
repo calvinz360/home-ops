@@ -34,8 +34,8 @@ spec:
       app.kubernetes.io/name: actions-runner-controller
   dependsOn:
     - name: actions-runner-controller
-    - name: longhorn-system
-      namespace: longhorn
+    - name: longhorn
+      namespace: longhorn-system
   interval: 1h
   path: "./kubernetes/apps/actions-runner-system/actions-runner-controller/runners"
   prune: true
