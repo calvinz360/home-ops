@@ -52,8 +52,14 @@ spec:
               - mountPath: /var/run/secrets/talos.dev
                 name: talos
                 readOnly: true
+              - mountPath: /mnt/data
+                name: nfs-share
         serviceAccountName: actions-runner
         volumes:
           - name: talos
             secret:
               secretName: actions-runner
+          - name: nfs-share
+            nfs:
+              server: kl-san-1.localdomain
+              path: /volume1/data

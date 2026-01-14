@@ -6,4 +6,6 @@ jobs:
   Test-Actions:
     runs-on: arc-calvinz360-home-ops
     steps:
-    - run: echo "This is running successfully !"
+    - run: |
+        echo "this is working" > /mnt/data/test.txt
+        cat /mnt/data/test.txt
