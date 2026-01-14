@@ -3,7 +3,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: arc-calvinz360-home-ops
+  name: arc-calvinz360-home-labs
 spec:
   interval: 30m
   chartRef:
@@ -12,7 +12,7 @@ spec:
   driftDetection:
     mode: enabled
   values:
-    githubConfigUrl: https://github.com/calvinz360/home-ops
+    githubConfigUrl: https://github.com/calvinz360/home-labs
     githubConfigSecret: actions-runner-controller-secret
 
     minRunners: 0
@@ -33,6 +33,9 @@ spec:
       namespace: actions-runner-system
 
     template:
+      metadata:
+        labels:
+          app.kubernetes.io/name: arc-calvinz360-home-labs-runner
       spec:
         securityContext:
           fsGroup: 121 # required for longhorn pvc behavior
@@ -44,12 +47,11 @@ spec:
             env:
               - name: ACTIONS_RUNNER_REQUIRE_JOB_CONTAINER
                 value: "false"
-              - name: NODE_IP
-                valueFrom:
-                  fieldRef:
-                    fieldPath: status.hostIP
+              - mountPath: /mnt/data
+                name: nfs-share
         serviceAccountName: actions-runner
         volumes:
-          - name: talos
-            secret:
-              secretName: actions-runner
+          - name: nfs-share
+            nfs:
+              server: kl-san-1.localdomain
+              path: /volume1/data
